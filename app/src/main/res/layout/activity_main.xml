@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="chat.ma.co.testandroidnh.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim_15_dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/dim_20_dp"
+        android:text="@string/txt_title" />
+
+    <LinearLayout
+        android:layout_below="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim_15_dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edit_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim_15_dp"
+            android:inputType="number"
+            android:background="@drawable/shape_rounded"
+            android:hint="@string/txt_edit"/>
+
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_15_dp"
+            android:textColor="@color/black"
+            android:padding="@dimen/dim_15_dp"
+            android:background="@drawable/shape_rounded_bg_gray"
+            android:text="@string/btn_calulate"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:visibility="visible"
+           android:orientation="vertical">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ProgressBar
+                   android:id="@+id/progress"
+                   style="?android:attr/progressBarStyleHorizontal"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_toLeftOf="@+id/txt_percent"
+                   android:padding="@dimen/dim_10_dp"
+                   android:layout_margin="@dimen/dim_10_dp"
+                   android:max="100" />
+               <TextView
+                   android:id="@+id/txt_percent"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toLeftOf="@+id/img_cancel"
+                   android:layout_centerVertical="true" />
+               <ImageView
+                   android:id="@+id/img_cancel"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:padding="@dimen/dim_10_sp"
+                   android:tint="@color/gray300"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/close_map"/>
+
+           </RelativeLayout>
+           <LinearLayout
+               android:id="@+id/ln_result"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:visibility="invisible"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/txt_result_title"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="@dimen/dim_10_dp"
+                   android:layout_margin="@dimen/dim_10_dp"
+                   android:textColor="@color/black"
+                   android:gravity="left"
+                   android:text="Result : "/>
+               <TextView
+                   android:id="@+id/txt_result"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/red"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/dim_16_dp"
+                   android:padding="@dimen/dim_15_dp"
+                   android:layout_margin="@dimen/dim_10_dp"
+                   android:background="@drawable/shape_rounded_bg_gray"
+                   android:gravity="center"/>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
